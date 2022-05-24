@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Merriweather:wght@300;400;900&family=Nunito:wght@300;400;600&family=Open+Sans:wght@500&family=Oswald:wght@300;400&family=Poppins:wght@500;600&family=Roboto+Slab:wght@300;400&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     </head>
     <body>
+    
      <header class="header">
          <a href="index.html" class="logo" ><img src="icons\ice-cream.png" height="40px" width="40px"><span class="moha"> Big Ice Cream</span></a>
                <nav class="navbar">
@@ -29,52 +30,57 @@
               <a href="#" class="fa fa-shopping-cart"></a>
           </div>
      </header>
+    
 
 
-
-
-
+      <form class="Form" id="Form" name="comment">
      <div class="container">
         <!--<h1 style="font-size:30px ; text-align: center; color: #e83e8c;">Register</h1>
         -->
+    
         <h3 class="heading" style="font-size: 35px;"><span>Register</span></h3>
         <p style="font-size:20px ; text-align: center;">Please fill in this form to create an account.</p>
         <hr>
         <label for="fname"><b style="font-size:25px ;color: #e83e8c;">First Name&nbsp;:</b></label>
-        <input type="text" placeholder="Enter First Name" name="first" id="name" required>
+        <input type="text" placeholder="Enter First Name" name="first" id="fname" >
+        
 
         <label for="lname"><b style="font-size:25px ;color: #e83e8c;">Last Name&nbsp;:</b></label>
-        <input type="text" placeholder="Enter Last Name" name="last" id="name" required>
+        <input type="text" placeholder="Enter Last Name" name="last" id="lname" >
 
         <label for="num"><b style="font-size:25px ;color: #e83e8c;">Phone Number&nbsp;:</b></label>
-        <input type="number" placeholder="Enter Your Number" name="num" id="num" required>
+        <input type="number" placeholder="Enter Your Number" name="num" id="num" >
 
 
-        <label for="address"><b style="font-size:25px ;color: #e83e8c;">Address&nbsp;:</b></label>
-        <input type="text" placeholder="Enter your address" name="address" id="address" required>
+        
 
 
         <label for="email"><b style="font-size:25px ;color: #e83e8c;">Email&nbsp;:</b></label>
-        <input type="text" placeholder="Enter Email" name="email" id="email" required>
+        <input type="text" placeholder="Enter Email" name="email" id="email" >
     
         <label for="psw"><b style="font-size:25px ;color: #e83e8c;">Password&nbsp;:</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+        <input type="password" placeholder="Enter Password" name="psw" id="psw"  maxlength="8" >
     
         <label for="psw-repeat"><b style="font-size:25px ;color: #e83e8c;">Repeat Password&nbsp;:</b></label>
-        <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+        <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat"  maxlength="8" >
         
-        
-
         <label for="gender"><b style="font-size:25px ;color: #e83e8c;">Gender&nbsp;:</b></label><br>
-       <div style="background: #f1f1f1;height:58px ;width:100%;padding: 15px;margin: 5px 0 22px 0;display: inline-block;border: none;"> <input type="radio" id="html" name="fav_language" value="" >
+       <div style="background: #f1f1f1;height:58px ;width:100%;padding: 15px;margin: 5px 0 22px 0;display: inline-block;border: none;">
+         <input type="radio" id="html" name="fav_language" value="" >
         <label for="html" class="box"><span style="font-size:20px ;">male&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></label>
         <input type="radio" id="css" name="fav_language" value="" >
         <label for="css" class="box"><span style="font-size:20px ;">female</span></label><br><br>
+        
+<br>
+        <label for="address"><b style="font-size:25px ;color: #e83e8c;">Address&nbsp;:</b></label>
+        <input type="text" placeholder="Enter your address" name="address" id="address">
+        <br><br>
+
         </div>
         <hr>
     
         <p >By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-        <button type="submit" class="registerbtn">Register</button>
+        <input type="submit" class="registerbtn" value="Register">
       </div>
     
       <div class="container signin">
@@ -135,7 +141,142 @@
         </div>
         
 
+    
+<script>
 
+window.onload=pageLoad;
+function pageLoad(){
+     var Form=document.getElementById("Form");
+     Form.onsubmit=validate;
+}
+function validate(){
+  var check=true;
+  var Fname=document.getElementById("fname").value;
+  var Lname=document.getElementById("lname").value;
+  var phone=document.getElementById("num").value;
+  var mail=document.getElementById("email").value;
+  var password=document.getElementById("psw").value;
+  var password_repreat=document.getElementById("psw-repeat").value;
+  
+  
+
+
+    if(Fname==""){
+      alert("First Name is required !");
+     
+      check=false;
+      return check;
+    }
+
+    if(!Fname.match(/^[A-Za-z]+$/)){
+      alert("only letters or space allowed in name field");
+      check=false;
+      return check;
+    }
+
+
+    if(Lname==""){
+      alert('Last Name is required !');
+      check=false;
+      return check;
+    }
+
+    if(!Lname.match(/^[A-Za-z]+$/)){
+      alert("only letters or space allowed in name field");
+      check=false;
+      return check;
+    }
+
+
+
+
+
+ if(phone == ""){
+      alert('Phone Number is required !');
+      check=false;
+      return check;
+    }
+
+    if(!phone.match(/^[0-9]{11}$/)){
+      alert("Phone Number is Not Valid.Please enter 11 number.");
+      check=false;
+      return check;
+    }
+
+
+
+
+
+    if(mail==""){
+      alert('E-mail is required !');
+      check=false;
+      return check;
+    }
+
+    if(!mail.match(/^[a-zA-z0-9]+@[a-zA-Z]+\.[a-zA-Z]+$/)){
+      alert("Email is Not Valid");
+      check=false;
+      return check;
+    }
+
+
+
+/*(?=.*\d)(?=.*[@#$%^&-+=()])(?=\\S+$)(?=.*[a-z])(?=.*[A-Z]{1}).{8}*/
+    if(password == "")
+{
+  alert ('password is required');
+  check=false;
+  return check;
+}
+
+if(!password.match(/^.*(?=.{8})(?!.* )(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$/))
+{
+alert("password is not valid ,it must contain 8 characters: one_uppercase , one_lowercase, one_number , one special character at least ");
+check=false;
+  return check;
+}
+
+    
+
+    if(password_repreat == "")
+{
+  alert ('Password_repreat is required');
+  check=false;
+  return check;
+}
+
+if(!password_repreat.match(/^.*(?=.{8})(?!.* )(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$/))
+{
+alert("password_repreat is not valid ,it must contain 8 characters: one_uppercase , one_lowercase, one_number , one special character at least ");
+check=false;
+  return check;
+}
+
+    if(this.fav_language[0].checked==false && this.fav_language[1].checked==false){
+        alert("Please select Gender");
+        check=false;
+        return check;
+        
+    }
+    
+
+    if(check==true){
+      alert('Thanks '+Fname+" "+Lname+' for join to us.');
+      window.location.href='about.html';
+    }
+
+
+    return check;
+}
+
+
+</script>
+
+
+
+
+
+ <script src="js/script.js"></script>
     </body>
     </html>
-    <script src="js/script.js"></script>
+   
