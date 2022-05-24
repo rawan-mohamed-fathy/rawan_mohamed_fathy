@@ -727,7 +727,7 @@ height: 25rem;
     }
  
 }
-@media (max-width:768px){
+@media (max-width:690px){
    header .icons #bars{
         display: inline-block;
     }
@@ -775,7 +775,7 @@ height: 25rem;
 
 
 
-@media (max-width:768px) 
+@media (max-width:690px) 
 {
 .heading{
     font-size: 3rem;
