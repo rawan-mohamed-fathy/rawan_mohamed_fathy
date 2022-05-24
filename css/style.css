@@ -727,7 +727,7 @@ height: 25rem;
     }
  
 }
-@media (max-width:600px){
+@media (max-width:500px){
    header .icons #bars{
         display: inline-block;
     }
@@ -775,13 +775,13 @@ height: 25rem;
 
 
 
-@media (max-width:600px) 
+@media (max-width:500px) 
 {
 .heading{
     font-size: 3rem;
 }    
 }
-@media (max-width:600px) {
+@media (max-width:500px) {
 
     
     .home .slide .content h3{
