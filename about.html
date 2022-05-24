@@ -59,10 +59,10 @@
         <input type="text" placeholder="Enter Email" name="email" id="email" >
     
         <label for="psw"><b style="font-size:25px ;color: #e83e8c;">Password&nbsp;:</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" id="psw"  maxlength="8" >
+        <input type="password" placeholder="Enter Password" name="psw" id="psw"   minlength="8" maxlength="8" >
     
         <label for="psw-repeat"><b style="font-size:25px ;color: #e83e8c;">Repeat Password&nbsp;:</b></label>
-        <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat"  maxlength="8" >
+        <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat"  minlength="8" maxlength="8" >
         
         <label for="gender"><b style="font-size:25px ;color: #e83e8c;">Gender&nbsp;:</b></label><br>
        <div style="background: #f1f1f1;height:58px ;width:100%;padding: 15px;margin: 5px 0 22px 0;display: inline-block;border: none;">
@@ -231,7 +231,7 @@ function validate(){
 
 if(!password.match(/^.*(?=.{8})(?!.* )(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$/))
 {
-alert("password is not valid ,it must contain 8 characters: one_uppercase , one_lowercase, one_number , one special character at least ");
+alert("password is not valid ,it must contain 8 characters: one_uppercase , one_lowercase, one_number , one special character at least,with no spaces. ");
 check=false;
   return check;
 }
@@ -247,7 +247,7 @@ check=false;
 
 if(!password_repreat.match(/^.*(?=.{8})(?!.* )(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$/))
 {
-alert("password_repreat is not valid ,it must contain 8 characters: one_uppercase , one_lowercase, one_number , one special character at least ");
+alert("password_repreat is not valid ,it must contain 8 characters: one_uppercase , one_lowercase, one_number , one special character at least,with no spaces. ");
 check=false;
   return check;
 }
