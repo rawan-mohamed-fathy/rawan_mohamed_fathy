@@ -231,7 +231,7 @@ function validate(){
 
 if(!password.match(/^.*(?=.{8})(?!.* )(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$/) || password[0]==password[0].toLowerCase())
 {
-alert("password is not valid ,it must contain 8 characters: one_uppercase , one_lowercase, one_number , one special character at least,with no spaces. ");
+alert("password is not valid ,it must begin with uppercase character and contain 8 characters:one_lowercase, one_number , one special character at least,with no spaces. ");
 check=false;
   return check;
 }
@@ -247,7 +247,7 @@ check=false;
 
 if(!password_repreat.match(/^.*(?=.{8})(?!.* )(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$/) || password_repreat[0]==password_repreat[0].toLowerCase())
 {
-alert("password_repreat is not valid ,it must contain 8 characters: one_uppercase , one_lowercase, one_number , one special character at least,with no spaces. ");
+alert("password_repreat is not valid ,it must begin with uppercase character and contain 8 characters: one_lowercase, one_number , one special character at least,with no spaces. ");
 check=false;
   return check;
 }
