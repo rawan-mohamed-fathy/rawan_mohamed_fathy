@@ -715,7 +715,7 @@ height: 25rem;
 
 
 
-@media screen and (max-width:991px){
+@media  (max-width:991px){
     html{
         font-size: 50%;
     }
@@ -727,7 +727,7 @@ height: 25rem;
     }
  
 }
-@media  screen and (max-width:768px){
+@media  (max-width:768px){
    header .icons #bars{
         display: inline-block;
     }
@@ -753,16 +753,16 @@ height: 25rem;
         background:#eee;
     }
    .moha{
-        font-size: 10px;
+        font-size: 30px;
   }
-  .icon-container .icon h3{
-    font-size: 1rem;
+  /*.icon-container .icon h3{
+    font-size: 2rem;
 
 }
 .icon-container .icon span{
-    font-size: 1rem;
+    font-size: 1.7rem;
 }
-
+*/
 
 
 .swiper-button-next,
@@ -775,13 +775,13 @@ height: 25rem;
 
 
 
-@media screen and (max-width:768px) 
+@media  (max-width:768px) 
 {
 .heading{
-    font-size: 1rem;
+    font-size: 3rem;
 }    
 }
-@media screen and (max-width:450px) {
+@media (max-width:450px) {
 
     
     .home .slide .content h3{
