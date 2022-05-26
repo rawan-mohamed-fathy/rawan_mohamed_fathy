@@ -715,7 +715,7 @@ height: 25rem;
 
 
 
-@media  (max-width:991px){
+@media screen and (max-width:991px){
     html{
         font-size: 50%;
     }
@@ -727,7 +727,7 @@ height: 25rem;
     }
  
 }
-@media   (max-width:768px){
+@media  screen and (max-width:768px){
    header .icons #bars{
         display: inline-block;
     }
@@ -775,17 +775,17 @@ height: 25rem;
 
 
 
-@media  (max-width:768px) 
+@media screen and (max-width:768px) 
 {
 .heading{
-    font-size: 3rem;
+    font-size: 2rem;
 }    
 }
-@media (max-width:450px) {
+@media screen and (max-width:450px) {
 
     
     .home .slide .content h3{
-        font-size: 7rem;
+        font-size: 5rem;
     }
     
 }
