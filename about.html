@@ -169,7 +169,7 @@ function validate(){
     }
 
     if(!Fname.match(/^[A-Za-z]+$/)){
-      alert("only letters or space allowed in name field");
+      alert("only letters allowed in name field");
       check=false;
       return check;
     }
@@ -182,7 +182,7 @@ function validate(){
     }
 
     if(!Lname.match(/^[A-Za-z]+$/)){
-      alert("only letters or space allowed in name field");
+      alert("only letters allowed in name field");
       check=false;
       return check;
     }
@@ -229,7 +229,7 @@ function validate(){
   return check;
 }
 
-if(!password.match(/^.*(?=.{8})(?!.* )(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$/))
+if(!password.match(/^.*(?=.{8})(?!.* )(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$/) || password[0]==password[0].toLowerCase())
 {
 alert("password is not valid ,it must contain 8 characters: one_uppercase , one_lowercase, one_number , one special character at least,with no spaces. ");
 check=false;
@@ -245,7 +245,7 @@ check=false;
   return check;
 }
 
-if(!password_repreat.match(/^.*(?=.{8})(?!.* )(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$/))
+if(!password_repreat.match(/^.*(?=.{8})(?!.* )(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$/) || password[0]==password[0].toLowerCase())
 {
 alert("password_repreat is not valid ,it must contain 8 characters: one_uppercase , one_lowercase, one_number , one special character at least,with no spaces. ");
 check=false;
